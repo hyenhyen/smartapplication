@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.monad.kpu.Activty.MenuActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:text="한국산업기술대학교"
+            android:background="@drawable/logo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="#dfebf6"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/guideline"
+            android:text="2017년 모집요강"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button"
+            />
+        <Button
+            android:id="@+id/score"
+            android:text="나의 수능 점수로 \n성적 산출"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:background="@drawable/button"
+            />
+    </LinearLayout>
+</LinearLayout>

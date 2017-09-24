@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="40dp">
+    <LinearLayout
+        android:layout_marginRight="1dp"
+        android:background="#ECECEC"
+        android:layout_width="100dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="11dp"
+            android:gravity="center"
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/temp"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="1dp"
+        android:background="#ECECEC"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="123" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginRight="1dp"
+        android:background="#ECECEC"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="123"
+            android:gravity="center"
+            android:id="@+id/item_my_score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginRight="1dp"
+        android:background="#ECECEC"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="123"
+            android:gravity="center"
+            android:id="@+id/item_difference"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ECECEC"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/item_diagnose"
+            android:text="123"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

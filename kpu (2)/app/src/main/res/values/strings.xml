@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Kpu</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="planets_array">
+        <item>학과편제순</item>
+        <item>학과2편제순</item>
+        <item>학과3편제순</item>
+    </string-array>
+</resources>
