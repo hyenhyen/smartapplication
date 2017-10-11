@@ -141,12 +141,12 @@ public class UserScoreActivity extends AppCompatActivity implements View.OnClick
                 int eng = Integer.parseInt(etEnglish.getText().toString());
                 int etc1 = Integer.parseInt(etEtc1.getText().toString());
                 int etc2 = Integer.parseInt(etEtc2.getText().toString());
-                if(getMathOption().equals("math")) {
+                if(getMathOption().equals("math")) { //수리가나로 나눠졌기때문에 각각 나눠야함..
                     nor_engineer = (kor * 0.8) + ((math * 1.2) * 1.1) + (eng * 1.2) + (etc1 * 0.4) + (etc2 * 0.4);
                 } else {
                     nor_engineer = (kor * 0.8) + (math * 1.2) + (eng * 1.2) + (etc1 * 0.4) + (etc2 * 0.4);
                 }
-                params.put("score", nor_engineer);
+                params.put("score", nor_engineer); //nor_engineer값 저장하구
 
                 HttpAsync.get("result.php", params, new JsonHttpResponseHandler() {
                     @Override
@@ -155,7 +155,7 @@ public class UserScoreActivity extends AppCompatActivity implements View.OnClick
                         if (statusCode == 200) {
                             MainActivity.data = response;
                             Intent i = new Intent(UserScoreActivity.this, MainActivity.class);
-                            i.putExtra("score", nor_engineer);
+                            i.putExtra("score", nor_engineer); //사용자 점수를 넘겨줘야하는부분
                             startActivity(i);
                             finish();
                         }

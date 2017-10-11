@@ -11,7 +11,7 @@ import com.loopj.android.http.RequestParams;
 ====================================*/
 
 public class HttpAsync {
-    private static final String BASE_URL = "http://52.78.144.49/";
+    private static final String BASE_URL = "http://52.78.144.49/"; //서버 바뀐 부분 체크ㅇㅇ!
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

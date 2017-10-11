@@ -79,6 +79,7 @@ public class ResultActivity extends AppCompatActivity {
         HttpAsync.get("result_detail.php", params, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                /*json으로 다 받아왔으면 2016-2014년도의 결과 까지 상세하게 보여주는 부분*/
 
                 if (statusCode == 200) {
                     try {
@@ -192,7 +193,7 @@ public class ResultActivity extends AppCompatActivity {
         tvHeader.setText("전년도 입시결과 [" + type + "] " + major);
     }
 
-    private void setPieChart() {
+    private void setPieChart() { //piechart로 국어 영어 수학 탐구 수능반영비율을 확인하는 부분
         pieChart.setUsePercentValues(true);
         pieChart.getDescription().setEnabled(true);
 

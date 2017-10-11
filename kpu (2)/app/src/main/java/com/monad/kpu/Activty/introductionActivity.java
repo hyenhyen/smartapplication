@@ -25,7 +25,7 @@ public class introductionActivity extends AppCompatActivity implements OnPageCha
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_introduction);
         pdfView = (PDFView) findViewById(R.id.pdfView);
-        pdfView.fromAsset("resume.pdf").load();
+        pdfView.fromAsset("resume.pdf").load(); //모집요강 pdf 파일 assets에 존재
     }
 
     private void displayFromAsset(String assetFileName) {

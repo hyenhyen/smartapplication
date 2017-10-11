@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
 
         if(data != null) {
             try {
-                JSONArray arr = data.getJSONArray("result");
+                JSONArray arr = data.getJSONArray("result"); //json으로 가져오는 내용 모든 것을 보여주는 부분
                 int topGrade = 0;
                 for(int i = 0 ; i< arr.length(); i++) {
                     JSONObject v = arr.getJSONObject(i);
@@ -115,14 +115,14 @@ public class MainActivity extends AppCompatActivity
                             diagnose,
                             content);
 
-                    model.major = v.getString("major");
-                    model.type = v.getString("type");
-                    model.year = v.getString("year");
+                    model.major = v.getString("major"); //과
+                    model.type = v.getString("type"); //전형
+                    model.year = v.getString("year"); //연도
 
                     myDataset.add(model);
 
                     int grade = 0;
-                    switch(diagnose) {
+                    switch(diagnose) { //높은 점수를 받을수록 A 낮은 점수받을지 D를 주는 부분
                         case "A":
                             grade = 4;
                             break;
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity
                             grade = 0;
                     }
 
-                    if(grade > topGrade) {
+                    if(grade > topGrade) { //상단부에 A받은 과를 추천해주는 부분
                         topGrade = grade;
                         headTitle.setText("2016 입시결과 [" + v.getString("type") + "] " + v.getString("major"));
                         main_member_count.setText(v.getString("recruit"));
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
-        mAdapter.setOnItemClickListener(new ResultRecyclerAdapter.ClickListener() {
+        mAdapter.setOnItemClickListener(new ResultRecyclerAdapter.ClickListener() { //메뉴를 누르면 보이는 곳,
             @Override
             public void onItemClick(int position, View v) {
                 ResultScoreModel m = myDataset.get(position);
